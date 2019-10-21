@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>audio and video gallary</title>
+    <style>
+        body{color: white;
+        font-size: 20px;}
+        html{
+        background-image: url(images/background_images.png);
+        background-attachment:fixed;
+    background-size: cover;
+    position: relative;
+   
+}
+a{color: white;font-size: 20px;}
+div p{
+    font-size:20px;
+}
+div img{ border-radius: 50px;
+   
+}
+#container1{
+    height: 200px;width: 500px;
+     margin:10px;  
+}
+#container1 div#one{
+    height: 200px;width: 200px;
+    float: left;}
+#container2{
+height: 200px;width: 500px;
+margin:10px;
+}
+#container2 div#two{
+height: 200px;width: 200px;
+float: left;
+}
+
+#container3{
+height: 200px;width: 500px;
+margin:10px;
+}
+#container3 div#three{
+height: 200px;width: 200px;
+float: left;
+}
+#container4{
+height: 200px;width: 500px;
+margin:10px;
+}
+#container4 div#four{
+height: 200px;width: 200px;
+float: left;
+}
+#container5{
+height: 200px;width: 500px;
+margin:10px;
+}
+#container5 div#five{
+height: 200px;width: 200px;
+float: left;
+}
+#container6{
+height: 200px;width: 500px;
+margin:10px;
+}
+#container6 div#six{
+height: 200px;width: 200px;
+float: left;
+}
+
+
+
+
+
+div#social_media{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+div#drag div{float: left;border: 2px solid black;border-radius:25px; }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+            
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <div id="container1" >
+        <div id="one">
+        <img src="images/blow_my_mind.png" alt="video1 image" srcset="" height="auto" width="100%;">
+        </div>
+        <div>
+       <p> song :blow my mind</p>
+       <p>Artist : Davido & Cris brown</p>
+        <audio src="audios/blow.mp3" preload="auto" controls>play audio</audio>
+        <a href="pages/page1.html" style="font-size: 20px;">click here to
+            watch video</a>
+        </div>
+    </div>
+     <div id="container2">
+         <div id="two">
+        <img src="images/heal_the_world.png" alt="video2 image" srcset=""
+            height="auto" width="100%;">
+            </div>
+            <div>
+            <p>song : Heal the world</p>
+            <p>Artist : Patoranking</p>
+            <audio src="audios/heal.mp3" preload="auto" controls>play
+                audio</audio>
+                <a href="pages/page2.html" style="font-size: 20px;">click
+                    here to watch video</a>
+            </div>
+    </div>
+    <div id="container3">
+        <div id="three">
+            <img src="images/great_nation.png" alt="video3 image" srcset=""
+            height="auto" width="100%;">
+            </div>
+            <div>
+            <p>song : Great Nation</p>
+            <p>Artist :Timi Dakalo</p>
+            <audio src="audios/nation.mp3" preload="auto" controls >play
+                audio</audio>
+                <a href="pages/page3.html" style="font-size: 20px;">click
+                    here to watch video</a>
+            </div>
+    </div>
+<div id="container4">
+        <div id="four">
+            <img src="images/i_feel_love.png" alt="video3 image" srcset=""
+            height="auto" width="100%;">
+            </div>
+            <div>
+            <p>song :i feel love</p>
+            <p>Artist :Bollywood</p>
+            <audio src="audios/i_feel_love.mp3" preload="auto" controls >play
+                audio</audio>
+                <a href="pages/page4.html" style="font-size: 20px;">click
+                    here to watch video</a>
+            </div>
+    </div>
+    <div id="container5">
+        <div id="five">
+            <img src="images/mile_ho_tum_hunko.png" alt="video3 image" srcset="" height="auto" width="100%;">
+        </div>
+        <div>
+            <p>song :kgf_ma_theme</p>
+            <p>Artist :Bollywood</p>
+            <audio src="audios/two.mp3" preload="auto" controls>play
+                audio</audio>
+            <a href="pages/page5.html" style="font-size: 20px;">click
+                here to watch video</a>
+        </div>
+    </div>
+    <div id="container6">
+        <div id="six">
+            <img src="images/kgf_ma_theme.png" alt="video3 image" srcset="" height="auto" width="100%;">
+        </div>
+        <div>
+            <p>song :mile_ho_tum_hunko</p>
+            <p>Artist :Bollywood</p>
+            <audio src="audios/three.mp3" preload="auto" controls>play
+                audio</audio>
+            <a href="pages/page6.html" style="font-size: 20px;">click
+                here to watch video</a>
+        </div>
+    </div>
+
+
+
+    <div id="drag">
+    <div id="socia_media">
+        <img src="images/fa.png" alt="facebook image" width="100px" id="drag1" draggable="true" ondragstart="drag(event)" width="336"
+            height="69">
+        <img src="images/is.png" alt="" width="100px" id="drag2" draggable="true" ondragstart="drag(event)" width="336"
+            height="69">
+
+        <img src="images/twit.png" alt="missing image" width="100px" id="drag3" draggable="true"
+            ondragstart="drag(event)" width="336" height="69">
+    </div>
+<div style="height: 200px; width:500px;border-radius:60px; border:2px solid white;" ondrop="drop(event)"
+    ondragover="allowDrop(event)">
+    <p style="text-align: center;">drag and drop the icons inside the box to open the link</p>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
